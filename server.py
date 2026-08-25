@@ -12,7 +12,6 @@ import http.server
 import socketserver
 import sys
 import os
-import webbrowser
 
 DEFAULT_PORT = 8000
 
@@ -43,12 +42,6 @@ def main():
         url = f"http://localhost:{port}"
         print(f"Serving Rock Paper Scissors at {url}")
         print("Press Ctrl+C to stop the server.")
-
-        # Try to open the default browser automatically (safe to ignore if it fails)
-        try:
-            webbrowser.open(url)
-        except Exception:
-            pass
 
         try:
             httpd.serve_forever()
