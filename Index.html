@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors — Championship Round</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hall">
+    <div class="ring">
+      <div class="rope rope-top"><span class="post post-left"></span><span class="post post-right"></span></div>
+
+      <header class="ring-header">
+        <p class="eyebrow">Round <span id="roundNumber">1</span></p>
+        <h1>Rock&nbsp;Paper&nbsp;Scissors</h1>
+        <p class="subhead">First to call the shot takes the round.</p>
+      </header>
+
+      <div class="scoreboard">
+        <div class="corner corner-you">
+          <span class="corner-tag">YOU</span>
+          <div class="flip-score" id="playerScoreWrap"><span id="playerScore">0</span></div>
+        </div>
+        <div class="bell" aria-hidden="true">
+          <span class="bell-line"></span>
+          <span class="bell-dot"></span>
+          <span class="bell-line"></span>
+        </div>
+        <div class="corner corner-cpu">
+          <span class="corner-tag">CPU</span>
+          <div class="flip-score" id="computerScoreWrap"><span id="computerScore">0</span></div>
+        </div>
+      </div>
+
+      <div class="arena">
+        <div class="fighter fighter-you">
+          <div id="playerPick" class="pick-circle">?</div>
+          <span class="pick-label">You</span>
+        </div>
+        <div class="vs-badge">VS</div>
+        <div class="fighter fighter-cpu">
+          <div id="computerPick" class="pick-circle">?</div>
+          <span class="pick-label">CPU</span>
+        </div>
+      </div>
+
+      <div class="result-zone">
+        <p id="resultText" class="result-banner">Make your move!</p>
+        <div id="confettiLayer" class="confetti-layer" aria-hidden="true"></div>
+      </div>
+
+      <div class="choices">
+        <button class="choice-btn" data-choice="rock" aria-label="Rock">
+          <span class="glove"><span class="emoji">✊</span></span>
+          <span class="choice-name">Rock</span>
+        </button>
+        <button class="choice-btn" data-choice="paper" aria-label="Paper">
+          <span class="glove"><span class="emoji">✋</span></span>
+          <span class="choice-name">Paper</span>
+        </button>
+        <button class="choice-btn" data-choice="scissors" aria-label="Scissors">
+          <span class="glove"><span class="emoji">✌️</span></span>
+          <span class="choice-name">Scissors</span>
+        </button>
+      </div>
+
+      <button id="resetBtn" class="reset-btn">Reset Match</button>
+
+      <div class="rope rope-bottom"><span class="post post-left"></span><span class="post post-right"></span></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
